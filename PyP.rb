@@ -17,9 +17,9 @@ class Tiempo
 	def initialize()
     end
     def FechaHora()
-    	puts "Fecha (AAAAMMDD):"
+    	print "Fecha (AAAAMMDD):"
     	fecha = gets
-    	puts "Hora (HHMM):"
+    	print "Hora (HHMM):"
     	hora = gets.chomp.to_i
         t = Time.mktime(fecha)
         day = t.strftime("%a")
@@ -33,49 +33,48 @@ class Tiempo
          h = 1
         end
 
-        if h == 1
-        case @sub
-        when 1..2 then 
+        $sub = $sub.chomp.to_i
+    if h == 1
+        case $sub
+             when 1..2 then 
                   if day == "Mon"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
 
-        when 3..4 then 
+            when 3..4 then 
                   if day == "Tue"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
 
-        when 5..6 then 
+            when 5..6 then 
                   if day == "Wen"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
 
-        when 7..8 then 
+            when 7..8 then 
                   if day == "Thu"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
 
-        when 9    then 
+            when 9    then 
                   if day == "Fri"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
 
-        when 0    then 
+            when 0    then 
                   if day == "Fri"
-                    puts "No puede transitar"
+                    puts "Vehiculo No puede transitar"
                   end
         else
             puts "No cumple criterio para Evaluacion"
 
         end
         
-        else
+    else
          puts "Puede transitar. Horario sin restriccion"
-        end
-
+    end
 
     end
-  
     
 end 
 
